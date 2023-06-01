@@ -12,10 +12,14 @@
       <a-assets>
         <!-- 3Dモデルを読み込む -->
         <a-asset-item id="try2" src="try2.glb" scale="5 5 5"></a-asset-item>
+        <a-asset-item id="try_obj" src="try.obj"></a-asset-item>
+        <a-asset-item id="try_mtl" src="try.mtl"></a-asset-item>
+        
       </a-assets>
       <!-- マーカーを設定する -->
       <a-marker type="pattern" url="pattern-marker.patt">
         <!-- 3Dモデルを呼び出す -->
+        <a-entity obj-model="obj: #try_obj; mtl: #try_mtl">
         <a-entity gltf-model="#try2" rotation="-90 0 0"></a-entity>
       </a-marker>
       <!-- カメラを追加 -->
